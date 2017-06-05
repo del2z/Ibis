@@ -2,11 +2,20 @@
 
 \RequirePackage{xcolor}
 \RequirePackage{pgf,tikz}
+\RequirePackage{xeCJK}
+
+\setmainfont[BoldFont=Menlo-Bold, ItalicFont=Menlo-Italic, BoldItalicFont=Menlo-BoldItalic]{Menlo-Regular}
+\setsansfont[BoldFont=GillSans-SemiBold]{GillSans}
+\setmonofont[BoldFont=Courier-Bold, ItalicFont=Courier-Oblique]{Courier}
+\setCJKmainfont[BoldFont=PingFangSC-Medium]{PingFangSC-Regular}
+\setCJKsansfont[BoldFont=STHeitiSC-Medium]{STHeitiSC-Light}
+\setCJKmonofont{YuppySC-Regular}
+
+\setbeamersize{text margin left=6mm}
+\setbeamersize{text margin right=6mm}
 
 \useinnertheme{megrez}
 \useoutertheme{megrez}
 \usecolortheme{megrez}
-
-\setbeamertemplate{blocks}[rounded][shadow=true]
 
 \mode<all>
