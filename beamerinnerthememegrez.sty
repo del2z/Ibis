@@ -15,12 +15,7 @@
 }
 \setbeamertemplate{subtitle}{
   {\hfill\bfseries \large\strut\insertsubtitle\strut\hspace*{2ex}}
-}
-\setbeamertemplate{separator}{
-  \begin{tikzpicture}
-    \fill[gray] (0, 0) rectangle (\textwidth, 0.5pt);
-  \end{tikzpicture}%
-  \vskip 2mm
+  \vskip 0.5mm
 }
 \setbeamertemplate{author}{
   \vskip 5mm
@@ -37,16 +32,18 @@
   \vskip 2mm
 }
 \setbeamertemplate{title page}{
-  \linespread{1.0}%
-  \vskip 16mm
+  \linespread{1.2}%
+  \vskip 15mm
   \ifx\insertsubtitle\@empty
-    \vskip 4mm
+    \vskip 9mm
     \usebeamertemplate*{title}
   \else
+    \vskip-1mm
     \usebeamertemplate*{title}
     \usebeamertemplate*{subtitle}
   \fi
-  \usebeamertemplate*{separator}
+  \sepline
+  \vskip 2mm
   \ifx\insertauthor\@empty\else\usebeamertemplate*{author}\fi
   \ifx\insertdate\@empty\else\usebeamertemplate*{date}\fi
   \ifx\insertinstitute\@empty\else\usebeamertemplate*{institute}\fi
@@ -55,18 +52,80 @@
 
 \def\titlepage{\usebeamertemplate{title page}}
 
-\setbeamertemplate{frametitle}{
-  \nointerlineskip
-  \vskip 5mm
-  \ifx\insertframesubtitle\@empty
-    {\bfseries \LARGE\hspace*{3mm}\strut\insertframetitle\strut\hfill}
-  \else
-    {\bfseries \LARGE\hspace*{3mm}\strut\insertframetitle\strut}
-    {\bfseries \large\hspace*{1mm}\longdash\strut\insertframesubtitle\strut\hfill}
-  \fi
-  \vskip-3mm
-  \usebeamertemplate*{separator}
+\AtBeginSection[]{
+  \begin{frame}[c]
+    \begin{center}
+      {\bfseries \LARGE\insertsection}
+    \end{center}
+  \end{frame}
 }
-\addtobeamertemplate{frametitle}{\vskip 2mm}{\vskip-3mm}
 
+\setbeamertemplate{itemize item}{\raisebox{0.2ex}{$\circledcirc$}}
+\setbeamertemplate{itemize subitem}{\raisebox{0.2ex}{$\odot$}}
+\setbeamertemplate{itemize subsubitem}{\raisebox{0.2ex}{$\circ$}}
+\setbeamerfont{itemize/enumerate body}{size=\large}
+\setbeamerfont{itemize/enumerate subbody}{size=\normalsize}
+\setbeamerfont{itemize/enumerate subsubbody}{size=\footnotesize}
+
+\def\megrez@itembody{%
+  \ifnum\@itemdepth=1\relax
+    \vspace*{-2mm}\vspace*{-0.5pt}
+    \setlength\itemsep{1.5ex}
+    \addtolength\itemindent{-0.8em}
+  \else
+    \ifnum\@itemdepth=2\relax
+      \vspace*{0.8ex}
+      \setlength\itemsep{1ex}
+      \addtolength\itemindent{-1.45em}
+    \else
+      \ifnum\@itemdepth=3\relax
+        \vspace*{0.5ex}
+        \setlength\itemsep{0.8ex}
+        \addtolength\itemindent{-2.7em}
+      \fi
+    \fi
+  \fi
+}
+
+\def\megrez@enditembody{%
+  \ifnum\@itemdepth=1\relax
+    \vspace*{0.2ex}
+  \else
+    \ifnum\@itemdepth=2\relax
+      \vspace*{-0.8ex}
+    \else
+      \ifnum\@itemdepth=3\relax
+        \vspace*{-0.5ex}
+      \fi
+    \fi
+  \fi
+}
+
+\xpatchcmd{\itemize}
+{\def\makelabel}
+{\megrez@itembody\def\makelabel}{}{}
+
+\xpatchcmd{\enumerate}
+{\def\makelabel}
+{\megrez@itembody\def\makelabel}{}{}
+
+\xpatchcmd{\enditemize}
+{\endlist}
+{\endlist\megrez@enditembody}{}{}
+
+\xpatchcmd{\endenumerate}
+{\endlist}
+{\endlist\megrez@enditembody}{}{}
+
+\setbeamertemplate{last page}{
+  \vskip 35mm
+  \begin{center}
+    {\bfseries\itshape \Large``To be or not to be, that is the question.''\par}
+    \vskip 5mm
+    \longdash William Shakespeare
+  \end{center}
+  \vfill
+}
+
+\def\lastpage{\usebeamertemplate{last page}}
 \mode<all>

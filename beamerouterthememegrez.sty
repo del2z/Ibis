@@ -5,5 +5,18 @@
 %% ∙ The frame title.
 
 \setbeamertemplate{navigation symbols}{}
+\addtolength{\topmargin}{2mm}
+
+\setbeamertemplate{frametitle}{
+  \nointerlineskip
+  \vskip 5mm
+  \ifx\insertframesubtitle\@empty
+    {\bfseries \LARGE\strut\insertframetitle\strut\hfill}
+  \else
+    {\bfseries \LARGE\strut\insertframetitle\strut}
+    {\bfseries \large\hspace*{1mm}\longdash\strut\insertframesubtitle\strut\hfill}
+  \fi
+}
+\addtobeamertemplate{frametitle}{}{\vskip-3mm\sepline\vskip-1mm\vskip-1.5pt}
 
 \mode<all>

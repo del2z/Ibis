@@ -1,14 +1,10 @@
-\documentclass[12pt]{beamer}
+\documentclass[t,12pt]{beamer}
 \usetheme{megrez}
 
-\usepackage{xeCJK}
-\setCJKmainfont{PingFangSC-Regular}
-\setCJKsansfont{PingFangSC-Regular}
-\setCJKmonofont{PingFangSC-Regular}
-
-\title{测试PPT}
-%\date[]{}
-\author[del2z]{Megrez \texttt{delta.z@aliyun.com}}
+\title{你好，世界}
+\subtitle{\longdash 一个测试Slide}
+\author[del2z]{Megrez}
+\institute{\href{mailto:delta.z@aliyun.com}{delta.z@aliyun.com}}
 
 \begin{document}
 
@@ -17,10 +13,30 @@
 \end{frame}
 
 \begin{frame}
-这是第一页。
-\begin{equation}
-  \nabla^2 z = 0
-\end{equation}
+\frametitle{测试主题}
+\framesubtitle{小心翼翼的改变}
+\begin{itemize}
+  \item 一点一点改变
+  \item 一点一点改变
+  \begin{itemize}
+    \item 这是level2
+    \begin{itemize}
+       \item 这是level3
+       \item 这是level3
+    \end{itemize}
+    \item 这是level2
+    \item 这是level2
+  \end{itemize}
+  \item 这是level1
+  \item 这是level1
+\end{itemize}
 \end{frame}
 
+\begin{frame}
+这里是空测试。
+\end{frame}
+
+\begin{frame}
+\lastpage
+\end{frame}
 \end{document}
