@@ -9,7 +9,6 @@
 
 \setbeamertemplate{frametitle}{
   \nointerlineskip
-  \vskip 5mm
   \ifx\insertframesubtitle\@empty
     {\bfseries \LARGE\strut\insertframetitle\strut\hfill}
   \else
@@ -17,6 +16,6 @@
     {\bfseries \large\hspace*{1mm}\longdash\strut\insertframesubtitle\strut\hfill}
   \fi
 }
-\addtobeamertemplate{frametitle}{}{\vskip-3mm\sepline\vskip-1mm\vskip-1.5pt}
+\addtobeamertemplate{frametitle}{\vspace*{5mm}}{\vspace{-3mm}\sepline\vspace{-2mm}}
 
 \mode<all>

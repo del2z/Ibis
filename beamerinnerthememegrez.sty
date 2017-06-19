@@ -43,7 +43,7 @@
     \usebeamertemplate*{subtitle}
   \fi
   \sepline
-  \vskip 2mm
+  \vskip 2mm\vskip 0pt
   \ifx\insertauthor\@empty\else\usebeamertemplate*{author}\fi
   \ifx\insertdate\@empty\else\usebeamertemplate*{date}\fi
   \ifx\insertinstitute\@empty\else\usebeamertemplate*{institute}\fi
@@ -69,17 +69,17 @@
 
 \def\megrez@itembody{%
   \ifnum\@itemdepth=1\relax
-    \vspace*{-2mm}\vspace*{-0.5pt}
+    \vspace{-2mm}
     \setlength\itemsep{1.5ex}
     \addtolength\itemindent{-0.8em}
   \else
     \ifnum\@itemdepth=2\relax
-      \vspace*{0.8ex}
+      \vspace{0.8ex}
       \setlength\itemsep{1ex}
       \addtolength\itemindent{-1.45em}
     \else
       \ifnum\@itemdepth=3\relax
-        \vspace*{0.5ex}
+        \vspace{0.5ex}
         \setlength\itemsep{0.8ex}
         \addtolength\itemindent{-2.7em}
       \fi
@@ -89,13 +89,13 @@
 
 \def\megrez@enditembody{%
   \ifnum\@itemdepth=1\relax
-    \vspace*{0.2ex}
+    \vspace{0.2ex}
   \else
     \ifnum\@itemdepth=2\relax
-      \vspace*{-0.8ex}
+      \vspace{-0.3ex}
     \else
       \ifnum\@itemdepth=3\relax
-        \vspace*{-0.5ex}
+        \vspace{-0.2ex}
       \fi
     \fi
   \fi
@@ -118,10 +118,10 @@
 {\endlist\megrez@enditembody}{}{}
 
 \setbeamertemplate{last page}{
-  \vskip 35mm
+  \vspace*{30mm}
   \begin{center}
     {\bfseries\itshape \Large``To be or not to be, that is the question.''\par}
-    \vskip 5mm
+    \vspace{5mm}
     \longdash William Shakespeare
   \end{center}
   \vfill

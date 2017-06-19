@@ -1,23 +1,25 @@
 \documentclass[t,12pt]{beamer}
 \usetheme{megrez}
 
+\begin{document}
 \title{你好，世界}
 \subtitle{\longdash 一个测试Slide}
 \author[del2z]{Megrez}
 \institute{\href{mailto:delta.z@aliyun.com}{delta.z@aliyun.com}}
-
-\begin{document}
+\date{\today}
 
 \begin{frame}
 \titlepage
 \end{frame}
 
+\mode<beamer>
+\section{test}
 \begin{frame}
 \frametitle{测试主题}
 \framesubtitle{小心翼翼的改变}
 \begin{itemize}
-  \item 一点一点改变
-  \item 一点一点改变
+  \item<1-> 一点一点改变
+  \item<2-> 一点一点改变
   \begin{itemize}
     \item 这是level2
     \begin{itemize}
@@ -27,8 +29,8 @@
     \item 这是level2
     \item 这是level2
   \end{itemize}
-  \item 这是level1
-  \item 这是level1
+  \item<2-> level1
+  \item<2-> level1
 \end{itemize}
 \end{frame}
 
