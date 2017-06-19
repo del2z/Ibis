@@ -2,11 +2,28 @@
 
 \RequirePackage{xcolor}
 \RequirePackage{pgf,tikz}
+\RequirePackage{xpatch}
+\RequirePackage{xeCJK}
+
+\setmainfont[BoldFont=Menlo-Bold, ItalicFont=Menlo-Italic, BoldItalicFont=Menlo-BoldItalic]{Menlo-Regular}
+\setsansfont[BoldFont=GillSans-SemiBold]{GillSans}
+\setmonofont[BoldFont=Courier-Bold, ItalicFont=Courier-Oblique]{Courier}
+\setCJKmainfont[BoldFont=PingFangSC-Medium]{PingFangSC-Regular}
+\setCJKsansfont[BoldFont=STHeitiSC-Medium]{STHeitiSC-Light}
+\setCJKmonofont{YuppySC-Regular}
+
+\setbeamersize{text margin left=8mm}
+\setbeamersize{text margin right=8mm}
+
+%% useful commands
+\def\longdash{\raisebox{0.2ex}{\,-----\,}}
+\def\ret{\protect\\[1em]}
+\def\sepline{
+  \makebox[\textwidth][c]{\tikz{\draw[line width=0.5pt,color=gray] (0, 0) -- (\textwidth+4mm, 0);}}
+}
 
 \useinnertheme{megrez}
 \useoutertheme{megrez}
 \usecolortheme{megrez}
-
-\setbeamertemplate{blocks}[rounded][shadow=true]
 
 \mode<all>
