@@ -63,23 +63,20 @@
 \setbeamertemplate{itemize item}{\raisebox{0.2ex}{$\circledcirc$}}
 \setbeamertemplate{itemize subitem}{\raisebox{0.2ex}{$\odot$}}
 \setbeamertemplate{itemize subsubitem}{\raisebox{0.2ex}{$\circ$}}
-\setbeamerfont{itemize/enumerate body}{size=\large}
-\setbeamerfont{itemize/enumerate subbody}{size=\normalsize}
-\setbeamerfont{itemize/enumerate subsubbody}{size=\footnotesize}
+\setbeamertemplate{itemize/enumerate body begin}{\vspace{-6mm}}
+\setbeamertemplate{itemize/enumerate subbody begin}{}
+\setbeamertemplate{itemize/enumerate subsubbody begin}{}
 
 \def\megrez@itembody{%
   \ifnum\@itemdepth=1\relax
-    \vspace{-2mm}
     \setlength\itemsep{1.5ex}
     \addtolength\itemindent{-0.8em}
   \else
     \ifnum\@itemdepth=2\relax
-      \vspace{0.8ex}
       \setlength\itemsep{1ex}
       \addtolength\itemindent{-1.45em}
     \else
       \ifnum\@itemdepth=3\relax
-        \vspace{0.5ex}
         \setlength\itemsep{0.8ex}
         \addtolength\itemindent{-2.7em}
       \fi
@@ -109,9 +106,9 @@
 {\def\makelabel}
 {\megrez@itembody\def\makelabel}{}{}
 
-\xpatchcmd{\enditemize}
-{\endlist}
-{\endlist\megrez@enditembody}{}{}
+%\xpatchcmd{\enditemize}
+%{\endlist}
+%{\endlist\megrez@enditembody}{}{}
 
 \xpatchcmd{\endenumerate}
 {\endlist}
