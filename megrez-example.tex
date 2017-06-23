@@ -1,34 +1,59 @@
 \documentclass[t,12pt]{beamer}
 \usetheme{megrez}
 
+\begin{document}
 \title{你好，世界}
 \subtitle{\longdash 一个测试Slide}
 \author[del2z]{Megrez}
 \institute{\href{mailto:delta.z@aliyun.com}{delta.z@aliyun.com}}
-
-\begin{document}
+\date{\today}
 
 \begin{frame}
 \titlepage
 \end{frame}
 
+\section{test}
 \begin{frame}
 \frametitle{测试主题}
-\framesubtitle{小心翼翼的改变}
+\framesubtitle{小心}
+\setlength\partopsep{3pt}
+
 \begin{itemize}
-  \item 一点一点改变
-  \item 一点一点改变
+  \setlength\topsep{3pt}
+  \item<1-> \fbox{光照条件下\the\itemsep, \the\parsep, \the\partopsep, \the\parskip}
+  \item<2-> 间隔\the\itemsep, \the\parsep, \the\partopsep, \the\parskip, \the\topsep
   \begin{itemize}
+    \item 这是\the\itemsep, \the\parsep, \the\partopsep, \the\parskip, \the\topsep
     \item 这是level2
     \begin{itemize}
-       \item 这是level3
-       \item 这是level3
+      \item 这是level3
+      \item 这是level3
     \end{itemize}
     \item 这是level2
-    \item 这是level2
   \end{itemize}
-  \item 这是level1
-  \item 这是level1
+  \item<2-> level1
+  \item<2-> level1
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{机器学习介绍}
+\framesubtitle{实际案例}
+\setlength\partopsep{3pt}
+
+\begin{itemize}
+  \setlength\topsep{3pt}
+  \item<1-> \fbox{光照条件下\the\itemsep, \the\parsep, \the\partopsep, \the\parskip, \the\topsep}
+  \vskip 0pt
+  \begin{itemize}
+    \item 不知道\the\itemsep, \the\parsep, \the\partopsep, \the\parskip, \the\topsep
+    \item 即使知道识别方法，程序也异常复杂
+  \end{itemize}
+  \item<2-> 信用卡虚假交易检测
+  \begin{itemize}
+    \item 没有简单可信的检测规则
+    \item 程序要随着欺诈手段更新而改变
+  \end{itemize}
 \end{itemize}
 \end{frame}
 
