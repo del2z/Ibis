@@ -63,30 +63,15 @@
 \setbeamertemplate{itemize item}{\raisebox{0.2ex}{$\circledcirc$}}
 \setbeamertemplate{itemize subitem}{\raisebox{0.2ex}{$\odot$}}
 \setbeamertemplate{itemize subsubitem}{\raisebox{0.2ex}{$\circ$}}
-\setlist[itemize,1]{%
-  topsep=0pt,
-  itemsep=1.5ex,
-  itemindent=-10pt,
+\setlist[itemize,1]{topsep=0pt,itemsep=1.5ex,itemindent=-10pt,
   label=\usebeamercolor[fg]{itemize item}\usebeamertemplate{itemize item},
-  before=\vspace{-8pt}\large,
-  after=\relax
-}
-\setlist[itemize,2]{%
-  topsep=0pt,
-  itemsep=1ex,
-  itemindent=-16pt,
+  before=\vspace{-7pt}\normalsize,after=\vspace{5pt}}
+\setlist[itemize,2]{topsep=0pt,itemsep=1ex,itemindent=-16pt,
   label=\usebeamercolor[fg]{itemize subitem}\usebeamertemplate{itemize subitem},
-  before=\normalsize,
-  after=\relax,
-}
-\setlist[itemize,3]{%
-  topsep=0pt,
-  itemsep=0.8ex,
-  itemindent=-25pt,
+  before=\vspace{2pt}\small,after=\vspace{-2pt}}
+\setlist[itemize,3]{topsep=0pt,itemsep=0.8ex,itemindent=-25pt,
   label=\usebeamercolor[fg]{itemize subsubitem}\usebeamertemplate{itemize subsubitem},
-  before=\small,
-  after=\relax
-}
+  before=\vspace{1pt}\footnotesize,after=\vspace{-1pt}}
 
 \setbeamertemplate{last page}{
   \vspace*{85pt}
