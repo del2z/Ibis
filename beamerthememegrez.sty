@@ -12,14 +12,14 @@
 \setCJKsansfont[BoldFont=STHeitiSC-Medium]{STHeitiSC-Light}
 \setCJKmonofont{YuppySC-Regular}
 
-\setbeamersize{text margin left=8mm}
-\setbeamersize{text margin right=8mm}
+\setbeamersize{text margin left=7.5mm,text margin right=7.5mm}
 
 %% useful commands
 \def\longdash{\raisebox{0.2ex}{\,-----\,}}
 \def\ret{\protect\\[1em]}
-\def\sepline{
-  \makebox[\textwidth][c]{\tikz{\draw[line width=0.5pt,color=gray] (0, 0) -- (\textwidth+4mm, 0);}}
+\def\tinybreak{\vskip 0pt}
+\def\sepline{%
+  \makebox[\textwidth][c]{\textcolor{gray}{\rule{\dimexpr\textwidth+3mm\relax}{0.5pt}}}
 }
 
 \useinnertheme{megrez}
