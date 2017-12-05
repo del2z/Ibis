@@ -4,13 +4,15 @@
 \RequirePackage{pgf,tikz}
 \RequirePackage{enumitem}
 \RequirePackage{xeCJK}
+\RequirePackage{etoolbox}
 
-\setmainfont[BoldFont=Menlo-Bold, ItalicFont=Menlo-Italic, BoldItalicFont=Menlo-BoldItalic]{Menlo-Regular}
-\setsansfont[BoldFont=GillSans-SemiBold]{GillSans}
+\setmainfont{Palatino}
+\setsansfont{Times}
 \setmonofont[BoldFont=Courier-Bold, ItalicFont=Courier-Oblique]{Courier}
 \setCJKmainfont[BoldFont=PingFangSC-Medium]{PingFangSC-Regular}
 \setCJKsansfont[BoldFont=STHeitiSC-Medium]{STHeitiSC-Light}
 \setCJKmonofont{YuppySC-Regular}
+\renewcommand*{\familydefault}{\rmdefault}
 
 \setbeamersize{text margin left=7.5mm,text margin right=7.5mm}
 
@@ -19,7 +21,9 @@
 \def\ret{\protect\\[1em]}
 \def\tinybreak{\vskip 0pt}
 \def\sepline{%
+  \tinybreak
   \makebox[\textwidth][c]{\textcolor{gray}{\rule{\dimexpr\textwidth+3mm\relax}{0.5pt}}}
+  \tinybreak
 }
 
 \useinnertheme{megrez}

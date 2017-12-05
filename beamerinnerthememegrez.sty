@@ -14,7 +14,7 @@
   \vskip 8pt
 }
 \setbeamertemplate{subtitle}{
-  {\hfill\bfseries \large\strut\insertsubtitle\strut\hspace*{2ex}}
+  {\hfill\bfseries \large\strut\insertsubtitle\strut\hskip 2ex}
   \vskip 2pt
 }
 \setbeamertemplate{author}{
@@ -33,12 +33,11 @@
 }
 \setbeamertemplate{title page}{
   \linespread{1.2}%
-  \vskip 42pt
   \ifx\insertsubtitle\@empty
-    \vskip 25pt
+    \vskip 66pt
     \usebeamertemplate*{title}
   \else
-    \vskip-3pt
+    \vskip 40pt
     \usebeamertemplate*{title}
     \usebeamertemplate*{subtitle}
   \fi
@@ -60,24 +59,24 @@
   \end{frame}
 }
 
-\setbeamertemplate{itemize item}{\raisebox{0.2ex}{$\circledcirc$}}
-\setbeamertemplate{itemize subitem}{\raisebox{0.2ex}{$\odot$}}
-\setbeamertemplate{itemize subsubitem}{\raisebox{0.2ex}{$\circ$}}
+\setbeamertemplate{itemize item}{\raisebox{0.18ex}{$\circledcirc$}}
+\setbeamertemplate{itemize subitem}{\raisebox{0.18ex}{$\odot$}}
+\setbeamertemplate{itemize subsubitem}{\raisebox{0.18ex}{$\circ$}}
 \setlist[itemize,1]{topsep=0pt,itemsep=1.5ex,itemindent=-10pt,
   label=\usebeamercolor[fg]{itemize item}\usebeamertemplate{itemize item},
-  before=\vspace{-7pt}\normalsize,after=\vspace{5pt}}
+  before=\vskip-6.4pt\tinybreak\normalsize,after=\vskip 5pt}
 \setlist[itemize,2]{topsep=0pt,itemsep=1ex,itemindent=-16pt,
   label=\usebeamercolor[fg]{itemize subitem}\usebeamertemplate{itemize subitem},
-  before=\vspace{2pt}\small,after=\vspace{-2pt}}
+  before=\vskip 2pt\tinybreak\small,after=\vskip-2pt}
 \setlist[itemize,3]{topsep=0pt,itemsep=0.8ex,itemindent=-25pt,
   label=\usebeamercolor[fg]{itemize subsubitem}\usebeamertemplate{itemize subsubitem},
-  before=\vspace{1pt}\footnotesize,after=\vspace{-1pt}}
+  before=\vskip 1pt\tinybreak\footnotesize,after=\vskip-1pt}
 
 \setbeamertemplate{last page}{
-  \vspace*{85pt}
+  \vskip 100pt
   \begin{center}
-    {\bfseries\itshape \Large``To be or not to be, that is the question.''\par}
-    \vspace{15pt}
+    {\bfseries\itshape \Large``To be or not to be, that is the question.''}
+    \vskip 15pt
     \longdash William Shakespeare
   \end{center}
   \vfill
