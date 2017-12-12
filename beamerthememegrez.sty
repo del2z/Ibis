@@ -1,9 +1,14 @@
 \mode<presentation>
 
 \RequirePackage{xcolor}
-\RequirePackage{pgf,tikz}
+\RequirePackage{tikz}
+\RequirePackage{pgfplots}
 \RequirePackage{enumitem}
 \RequirePackage{xeCJK}
+\RequirePackage{amsmath}
+\RequirePackage{amsfonts}
+\RequirePackage{algorithm}
+\RequirePackage{algorithmic}
 \RequirePackage{etoolbox}
 
 \setmainfont{Palatino}
@@ -25,6 +30,21 @@
   \makebox[\textwidth][c]{\textcolor{gray}{\rule{\dimexpr\textwidth+3mm\relax}{0.5pt}}}
   \tinybreak
 }
+
+\BeforeBeginEnvironment{displaymath}{\tinybreak}
+\AfterEndEnvironment{displaymath}{\tinybreak}
+
+\g@addto@macro{\normalsize}{%
+  \setlength{\abovedisplayskip}{5pt}
+  \setlength{\abovedisplayshortskip}{5pt}
+  \setlength{\belowdisplayskip}{5pt}
+  \setlength{\belowdisplayshortskip}{5pt}}
+
+\g@addto@macro{\small}{%
+  \setlength{\abovedisplayskip}{3pt}
+  \setlength{\abovedisplayshortskip}{3pt}
+  \setlength{\belowdisplayskip}{3pt}
+  \setlength{\belowdisplayshortskip}{3pt}}
 
 \useinnertheme{megrez}
 \useoutertheme{megrez}
