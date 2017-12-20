@@ -7,11 +7,11 @@
 \setbeamertemplate{navigation symbols}{}
 \addtolength{\topmargin}{8pt}
 
-\setbeamertemplate{frametitle}{
-  \nointerlineskip
-  \ifx\insertframesubtitle\@empty
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip%
+  \ifx\insertframesubtitle\@empty%
     {\bfseries \LARGE\strut\insertframetitle\strut\hfill}
-  \else
+  \else%
     {\bfseries \LARGE\strut\insertframetitle\strut}
     {\bfseries \large\hskip 3pt\longdash\strut\insertframesubtitle\strut\hfill}
   \fi

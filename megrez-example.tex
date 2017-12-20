@@ -57,6 +57,53 @@
 \end{frame}
 
 \begin{frame}
+\frametitle{损失函数优化}
+\framesubtitle{Taylor展开式}
+\begin{itemize}
+  \item<1-> 二阶Taylor展开式
+  \begin{gather*}
+    \begin{align*}
+    L(\mathbf{u}) =&\: L(\mathbf{u}_o) + (\mathbf{u} - \mathbf{u}_o)^T \mathbf{g}(\mathbf{u}_o)
+      + \frac{1}{2} (\mathbf{u} - \mathbf{u}_o)^T \mathbf{H}(\mathbf{u}_o) (\mathbf{u} - \mathbf{u}_o) \\
+    &+ O(\|\mathbf{u} - \mathbf{u}_o\|_\infty^3)
+    \end{align*}
+    \only<1>{\\
+    \tikz[overlay] {
+    \node[rectangle, rounded corners=8pt, inner sep=5pt, draw=cyan, line width=1pt] at (0, -1.25) {\(
+    \mathbf{H}(\mathbf{u}_o) = \nabla^2 L(\mathbf{u}_o) = \begin{bmatrix}
+      \frac{\partial^2 L}{\partial u_1^2} & \frac{\partial^2 L}{\partial u_1 \partial u_2} & \cdots & \frac{\partial^2 L}{\partial u_1 \partial u_d} \\[5pt]
+      \frac{\partial^2 L}{\partial u_2 \partial u_1} & \frac{\partial^2 L}{\partial u_2^2} & \cdots & \frac{\partial^2 L}{\partial u_2 \partial u_d} \\
+      \vdots & \vdots & \ddots & \vdots \\[2pt]
+      \frac{\partial^2 L}{\partial u_d \partial u_1} & \frac{\partial^2 L}{\partial u_d \partial u_2} & \cdots & \frac{\partial^2 L}{\partial u_d^2}
+    \end{bmatrix}_{\mathbf{u} \,=\, \mathbf{u}_o} \)};}}
+    %O(\|\mathbf{u} - \mathbf{u}_o\|_\infty^3) \approx \mathbf{0}}
+  \end{gather*}
+  \item<2> 最小化\( L(\mathbf{u}) \)
+  \begin{gather*}
+    \min_{\mathbf{u}} L(\mathbf{u}) \;\Longleftrightarrow\; \frac{\partial L(\mathbf{u})}{\partial \mathbf{u}} = \mathbf{0} \\[5pt]
+    \mathbf{g}(\mathbf{u}_o) + \mathbf{H}(\mathbf{u}_o) (\mathbf{u} - \mathbf{u}_o) = \mathbf{0} \\[5pt]
+    \mathbf{u} = \mathbf{u}_o - \textcolor{gray}{\eta} \mathbf{H}(\mathbf{u}_o)^{-1} \mathbf{g}(\mathbf{u}_o)
+  \end{gather*}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{损失函数优化}
+\framesubtitle{数值优化方法}
+\begin{itemize}
+  \item 优化模型参数
+  \begin{gather*}
+    f(\mathbf{x}) \overset{def}{=} f(\mathbf{x}; \boldsymbol{\theta}) \\[5pt]
+    L(y,\, f(\mathbf{x})) = L(\boldsymbol{\theta}), \quad \forall\: (y,\, \mathbf{x}) \in \mathcal{D}
+  \end{gather*}
+  \item 梯度下降法
+  \[ \boldsymbol{\theta'} = \boldsymbol{\theta} - \eta \mathbf{g}(\boldsymbol{\theta}) {\hskip 12em} \]
+  \item Newton法 \tinybreak
+  \[ \boldsymbol{\theta'} = \boldsymbol{\theta} - \eta \mathbf{H}(\boldsymbol{\theta})^{-1} \mathbf{g}(\boldsymbol{\theta}) \]
+\end{itemize}
+\end{frame}
+
+\begin{frame}
 \lastpage
 \end{frame}
 \end{document}

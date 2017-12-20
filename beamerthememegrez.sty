@@ -26,24 +26,24 @@
 \def\ret{\protect\\[1em]}
 \def\tinybreak{\vskip 0pt}
 \def\sepline{%
-  \tinybreak
+  \tinybreak%
   \makebox[\textwidth][c]{\textcolor{gray}{\rule{\dimexpr\textwidth+3mm\relax}{0.5pt}}}
-  \tinybreak
+  \tinybreak%
 }
 
 \BeforeBeginEnvironment{displaymath}{\tinybreak}
 \AfterEndEnvironment{displaymath}{\tinybreak}
 
 \g@addto@macro{\normalsize}{%
-  \setlength{\abovedisplayskip}{5pt}
-  \setlength{\abovedisplayshortskip}{5pt}
-  \setlength{\belowdisplayskip}{5pt}
+  \setlength{\abovedisplayskip}{5pt}%
+  \setlength{\abovedisplayshortskip}{5pt}%
+  \setlength{\belowdisplayskip}{5pt}%
   \setlength{\belowdisplayshortskip}{5pt}}
 
 \g@addto@macro{\small}{%
-  \setlength{\abovedisplayskip}{3pt}
-  \setlength{\abovedisplayshortskip}{3pt}
-  \setlength{\belowdisplayskip}{3pt}
+  \setlength{\abovedisplayskip}{3pt}%
+  \setlength{\abovedisplayshortskip}{3pt}%
+  \setlength{\belowdisplayskip}{3pt}%
   \setlength{\belowdisplayshortskip}{3pt}}
 
 \useinnertheme{megrez}
