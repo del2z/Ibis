@@ -9,36 +9,35 @@
 %% ∙ Footnotes.
 %% ∙ Bibliography entries.
 
-\setbeamertemplate{title}{
+\setbeamertemplate{title}{%
   {\hfill\bfseries \huge\strut\inserttitle\strut\hfill}
   \vskip 8pt
 }
-\setbeamertemplate{subtitle}{
-  {\hfill\bfseries \large\strut\insertsubtitle\strut\hspace*{2ex}}
+\setbeamertemplate{subtitle}{%
+  {\hfill\bfseries \large\strut\insertsubtitle\strut\hskip 2ex}
   \vskip 2pt
 }
-\setbeamertemplate{author}{
+\setbeamertemplate{author}{%
   \vskip 15pt
   {\hfill\bfseries \Large\strut\insertauthor\strut\hfill}
   \vskip 6pt
 }
-\setbeamertemplate{date}{
+\setbeamertemplate{date}{%
   {\hfill\strut\insertdate\strut\hfill}
   \vskip 6pt
 }
-\setbeamertemplate{institute}{
+\setbeamertemplate{institute}{%
   \vskip 5pt
   {\hfill\normalsize\strut\insertinstitute\strut\hfill}
   \vskip 6pt
 }
-\setbeamertemplate{title page}{
+\setbeamertemplate{title page}{%
   \linespread{1.2}%
-  \vskip 42pt
-  \ifx\insertsubtitle\@empty
-    \vskip 25pt
+  \ifx\insertsubtitle\@empty%
+    \vskip 66pt
     \usebeamertemplate*{title}
-  \else
-    \vskip-3pt
+  \else%
+    \vskip 40pt
     \usebeamertemplate*{title}
     \usebeamertemplate*{subtitle}
   \fi
@@ -47,12 +46,12 @@
   \ifx\insertauthor\@empty\else\usebeamertemplate*{author}\fi
   \ifx\insertdate\@empty\else\usebeamertemplate*{date}\fi
   \ifx\insertinstitute\@empty\else\usebeamertemplate*{institute}\fi
-  \vfill
+  \vfill%
 }
 
 \def\titlepage{\usebeamertemplate{title page}}
 
-\AtBeginSection[]{
+\AtBeginSection[]{%
   \begin{frame}[c]
     \begin{center}
       {\bfseries \LARGE\insertsection}
@@ -60,39 +59,24 @@
   \end{frame}
 }
 
-\setbeamertemplate{itemize item}{\raisebox{0.2ex}{$\circledcirc$}}
-\setbeamertemplate{itemize subitem}{\raisebox{0.2ex}{$\odot$}}
-\setbeamertemplate{itemize subsubitem}{\raisebox{0.2ex}{$\circ$}}
-\setlist[itemize,1]{%
-  topsep=0pt,
-  itemsep=1.5ex,
-  itemindent=-10pt,
+\setbeamertemplate{itemize item}{\raisebox{0.18ex}{$\circledcirc$}}
+\setbeamertemplate{itemize subitem}{\raisebox{0.18ex}{$\odot$}}
+\setbeamertemplate{itemize subsubitem}{\raisebox{0.18ex}{$\circ$}}
+\setlist[itemize,1]{topsep=0pt,itemsep=1.5ex,itemindent=-10pt,
   label=\usebeamercolor[fg]{itemize item}\usebeamertemplate{itemize item},
-  before=\vspace{-8pt}\large,
-  after=\relax
-}
-\setlist[itemize,2]{%
-  topsep=0pt,
-  itemsep=1ex,
-  itemindent=-16pt,
+  before=\vskip-6.4pt\tinybreak\normalsize,after=\vskip 5pt}
+\setlist[itemize,2]{topsep=0pt,itemsep=1ex,itemindent=-16pt,
   label=\usebeamercolor[fg]{itemize subitem}\usebeamertemplate{itemize subitem},
-  before=\normalsize,
-  after=\relax,
-}
-\setlist[itemize,3]{%
-  topsep=0pt,
-  itemsep=0.8ex,
-  itemindent=-25pt,
+  before=\vskip 2pt\tinybreak\small,after=\vskip-2pt}
+\setlist[itemize,3]{topsep=0pt,itemsep=0.8ex,itemindent=-25pt,
   label=\usebeamercolor[fg]{itemize subsubitem}\usebeamertemplate{itemize subsubitem},
-  before=\small,
-  after=\relax
-}
+  before=\vskip 1pt\tinybreak\footnotesize,after=\vskip-1pt}
 
-\setbeamertemplate{last page}{
-  \vspace*{85pt}
+\setbeamertemplate{last page}{%
+  \vskip 100pt
   \begin{center}
-    {\bfseries\itshape \Large``To be or not to be, that is the question.''\par}
-    \vspace{15pt}
+    {\bfseries\itshape \Large``To be or not to be, that is the question.''}
+    \vskip 15pt
     \longdash William Shakespeare
   \end{center}
   \vfill
