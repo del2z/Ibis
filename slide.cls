@@ -9,7 +9,7 @@
 \DeclareOption{zh}{\OptionNotUsed}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{beamer}}
 \ProcessOptions\relax
-\LoadClass[t,12pt,aspectratio=169]{beamer}
+\LoadClass[12pt]{beamer}
 
 \setlength{\beamer@paperwidth}{192.0mm}
 \setlength{\beamer@paperheight}{108.0mm}

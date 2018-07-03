@@ -52,7 +52,7 @@
 \def\titlepage{\usebeamertemplate{title page}}
 
 \AtBeginSection[]{%
-  \begin{frame}[c]
+  \begin{frame}[c,plain,noframenumbering]
     \begin{center}
       {\bfseries \LARGE\insertsection}
     \end{center}
@@ -62,13 +62,13 @@
 \setbeamertemplate{itemize item}{\raisebox{0.18ex}{$\circledcirc$}}
 \setbeamertemplate{itemize subitem}{\raisebox{0.18ex}{$\odot$}}
 \setbeamertemplate{itemize subsubitem}{\raisebox{0.18ex}{$\circ$}}
-\setlist[itemize,1]{topsep=0pt,itemsep=1.5ex,itemindent=-10pt,
+\setlist[itemize,1]{topsep=0pt,itemsep=1.5ex,itemindent=0pt,
   label=\usebeamercolor[fg]{itemize item}\usebeamertemplate{itemize item},
   before=\vskip-6.4pt\tinybreak\normalsize,after=\vskip 5pt}
-\setlist[itemize,2]{topsep=0pt,itemsep=1ex,itemindent=-16pt,
+\setlist[itemize,2]{topsep=0pt,itemsep=1ex,itemindent=0pt,
   label=\usebeamercolor[fg]{itemize subitem}\usebeamertemplate{itemize subitem},
   before=\vskip 2pt\tinybreak\small,after=\vskip-2pt}
-\setlist[itemize,3]{topsep=0pt,itemsep=0.8ex,itemindent=-25pt,
+\setlist[itemize,3]{topsep=0pt,itemsep=0.8ex,itemindent=0pt,
   label=\usebeamercolor[fg]{itemize subsubitem}\usebeamertemplate{itemize subsubitem},
   before=\vskip 1pt\tinybreak\footnotesize,after=\vskip-1pt}
 
