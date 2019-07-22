@@ -3,36 +3,42 @@
 %% ∙ The sidebars.
 %% ∙ The logo.
 %% ∙ The frame title.
-\setbeamertemplate{frametitle}{%
-  \vskip 8pt\leavevmode%
-  \hbox{%
-  \begin{beamercolorbox}[wd=\paperwidth,ht=3.6ex,dp=1ex,left]{frametitle}%
-    \hspace*{2em}%
-    \ifx\insertframesubtitle\@empty%
-      {\bfseries \LARGE\strut\insertframetitle\strut\hfill}
-    \else%
-      {\bfseries \LARGE\strut\insertframetitle\strut}%
-      {\bfseries \large\hskip 3pt\longdash\strut\insertframesubtitle\strut\hfill}%
-    \fi
-  \end{beamercolorbox}}%
-  \vskip0pt
-}
-
-\useoutertheme{infolines}
+\useoutertheme{default}
+\setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{headline}{}
 \setbeamertemplate{footline}{%
   \leavevmode%
   \hbox{%
-  \begin{beamercolorbox}[wd=.25\paperwidth,ht=2.4ex,dp=1ex,center]{palette primary}%
-    \usebeamerfont{author in head/foot}\insertshortauthor
+  \begin{beamercolorbox}[wd=.25\paperwidth,ht=2.5ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor{} - \insertshortinstitute
   \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.4ex,dp=1ex,center]{palette secondary}%
-    \usebeamerfont{title in head/foot}\insertshorttitle\hspace*{3em}
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1ex,center]{title in head/foot}%
+    \ifx\insertsectionhead\@empty%
+      \usebeamerfont{title in head/foot}\insertshorttitle{}
+    \else%
+      \usebeamerfont{title in head/foot}\insertshorttitle{} - \insertsectionhead
+    \fi
   \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.25\paperwidth,ht=2.4ex,dp=1ex,center]{palette tertiary}%
+  \begin{beamercolorbox}[wd=.25\paperwidth,ht=2.5ex,dp=1ex,center]{page number in head/foot}%
+    \usebeamerfont{page number in head/foot}\insertshortdate\hspace*{3em}%
     \insertframenumber{} / \inserttotalframenumber
   \end{beamercolorbox}}%
   \vskip0pt%
 }
-\setbeamertemplate{navigation symbols}{}
+
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip%
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=3.6ex,dp=1.5ex,left]{frametitle}%
+    \hspace*{2em}%
+    \ifx\insertframesubtitle\@empty%
+      \strut\usebeamerfont{frametitle}\insertframetitle\strut\hfill
+    \else%
+      \strut\usebeamerfont{frametitle}\insertframetitle\strut%
+      \hskip3pt\longdash\strut\usebeamerfont{framesubtitle}\insertframesubtitle\strut\hfill%
+    \fi
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
 \mode<all>

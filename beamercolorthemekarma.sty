@@ -1,9 +1,17 @@
 \mode<presentation>
 %% ∙ Colors for elements in inner and outer themes.
-\setbeamercolor{palette primary}{bg=red}
-\setbeamercolor{palette secondary}{bg=blue}
-\setbeamercolor{palette tertiary}{bg=green}
-\setbeamercolor{palette quaternary}{bg=black}
+\definecolor{DeepSkyBlue}{RGB}{0, 191, 255}
+\definecolor{SkyBlue}{RGB}{135, 206, 255}
+\definecolor{LightSkyBlue}{RGB}{176, 226, 255}
+\definecolor{DimGrey}{RGB}{96, 96, 96}
 
-\setbeamercolor{frametitle}{parent=palette primary, bg=gray}
+\setbeamercolor{palette primary}{bg=DeepSkyBlue}
+\setbeamercolor{palette secondary}{bg=SkyBlue}
+\setbeamercolor{palette tertiary}{bg=LightSkyBlue}
+\setbeamercolor{palette quaternary}{bg=LightSkyBlue}
+
+\setbeamercolor{frametitle}{parent=palette primary, fg=white}
+\setbeamercolor{title in head/foot}{parent=palette secondary, fg=DimGrey}
+\setbeamercolor{author in head/foot}{parent=palette tertiary, fg=DimGrey}
+\setbeamercolor{page number in head/foot}{parent=palette tertiary, fg=DimGrey}
 \mode<all>
