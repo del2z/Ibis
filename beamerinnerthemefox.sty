@@ -8,18 +8,19 @@
 %% ∙ Figures and tables.
 %% ∙ Footnotes.
 %% ∙ Bibliography entries.
+\useinnertheme[shadow=true]{rounded}
 
 \setbeamertemplate{title}{%
-  {\hfill\bfseries \huge\strut\inserttitle\strut\hfill}
+  {\hfill\strut\inserttitle\strut\hfill}
   \vskip 8pt
 }
 \setbeamertemplate{subtitle}{%
-  {\hfill\bfseries \large\strut\insertsubtitle\strut\hskip 2ex}
+  {\hfill\strut\insertsubtitle\strut\hskip2em}
   \vskip 2pt
 }
 \setbeamertemplate{author}{%
   \vskip 15pt
-  {\hfill\bfseries \Large\strut\insertauthor\strut\hfill}
+  {\hfill\strut\insertauthor\strut\hfill}
   \vskip 6pt
 }
 \setbeamertemplate{date}{%
@@ -34,14 +35,14 @@
 \setbeamertemplate{title page}{%
   \linespread{1.2}%
   \ifx\insertsubtitle\@empty%
-    \vskip 66pt
+    \vskip 75pt
     \usebeamertemplate*{title}
   \else%
-    \vskip 40pt
+    \vskip 50pt
     \usebeamertemplate*{title}
     \usebeamertemplate*{subtitle}
   \fi
-  \sepline
+  \srule
   \vskip 6pt\vskip 0pt
   \ifx\insertauthor\@empty\else\usebeamertemplate*{author}\fi
   \ifx\insertdate\@empty\else\usebeamertemplate*{date}\fi
@@ -52,31 +53,36 @@
 \def\titlepage{\usebeamertemplate{title page}}
 
 \AtBeginSection[]{%
-  \begin{frame}[c]
+  \begin{frame}[c,plain,noframenumbering]
     \begin{center}
-      {\bfseries \LARGE\insertsection}
+      \usebeamerfont{section title}\insertsection
     \end{center}
   \end{frame}
 }
 
+\setbeamercolor{block title}{use=structure,fg=structure.fg,bg=structure.fg!20!bg}
+\setbeamercolor{block body}{parent=normal text,use=block title,bg=block title.bg!50!bg}
+\setbeamercolor{block title example}{use=example text,fg=example text.fg,bg=example text.fg!20!bg}
+\setbeamercolor{block body example}{parent=normal text,use=block title example,bg=block title example.bg!50!bg}
+
 \setbeamertemplate{itemize item}{\raisebox{0.18ex}{$\circledcirc$}}
 \setbeamertemplate{itemize subitem}{\raisebox{0.18ex}{$\odot$}}
 \setbeamertemplate{itemize subsubitem}{\raisebox{0.18ex}{$\circ$}}
-\setlist[itemize,1]{topsep=0pt,itemsep=1.5ex,itemindent=-10pt,
+\setlist[itemize,1]{topsep=0pt,itemsep=1.5ex,itemindent=0pt,
   label=\usebeamercolor[fg]{itemize item}\usebeamertemplate{itemize item},
-  before=\vskip-6.4pt\tinybreak\normalsize,after=\vskip 5pt}
-\setlist[itemize,2]{topsep=0pt,itemsep=1ex,itemindent=-16pt,
+  before=\vskip-6.4pt\vbreak\normalsize,after=\vskip 5pt}
+\setlist[itemize,2]{topsep=0pt,itemsep=1ex,itemindent=0pt,
   label=\usebeamercolor[fg]{itemize subitem}\usebeamertemplate{itemize subitem},
-  before=\vskip 2pt\tinybreak\small,after=\vskip-2pt}
-\setlist[itemize,3]{topsep=0pt,itemsep=0.8ex,itemindent=-25pt,
+  before=\vskip 2pt\vbreak\small,after=\vskip-2pt}
+\setlist[itemize,3]{topsep=0pt,itemsep=0.8ex,itemindent=0pt,
   label=\usebeamercolor[fg]{itemize subsubitem}\usebeamertemplate{itemize subsubitem},
-  before=\vskip 1pt\tinybreak\footnotesize,after=\vskip-1pt}
+  before=\vskip 1pt\vbreak\footnotesize,after=\vskip-1pt}
 
 \setbeamertemplate{last page}{%
-  \vskip 100pt
+  \vskip 80pt%
   \begin{center}
-    {\bfseries\itshape \Large``To be or not to be, that is the question.''}
-    \vskip 15pt
+    {\bfseries\itshape \Large``To be or not to be, that is the question.''}%
+    \vskip 15pt%
     \longdash William Shakespeare
   \end{center}
   \vfill

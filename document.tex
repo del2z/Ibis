@@ -1,20 +1,20 @@
-\documentclass{slide}
-\usetheme{karma}
+\documentclass[zh]{slide}
 
 \begin{document}
 \title{你好，世界}
 \subtitle{\longdash 一个测试Slide}
 \author[del2z]{del2z}
-\institute{\href{mailto:delta.z@aliyun.com}{delta.z@aliyun.com}}
+\institute[Alibaba]{Commercial Data Platform - Amap - Alibaba Inc.}
 \date{\today}
 
-\begin{frame}
+\begin{frame}[plain,noframenumbering]
 \titlepage
 \end{frame}
 
 \section{test}
 \begin{frame}
 \frametitle{测试主题}
+\note{测试注解}
 \framesubtitle{小心}
 
 \begin{itemize}
@@ -98,7 +98,7 @@
   \end{gather*}
   \item 梯度下降法
   \[ \boldsymbol{\theta'} = \boldsymbol{\theta} - \eta \mathbf{g}(\boldsymbol{\theta}) {\hskip 12em} \]
-  \item Newton法 \tinybreak
+  \item Newton法 \vbreak
   \[ \boldsymbol{\theta'} = \boldsymbol{\theta} - \eta \mathbf{H}(\boldsymbol{\theta})^{-1} \mathbf{g}(\boldsymbol{\theta}) \]
 \end{itemize}
 \end{frame}

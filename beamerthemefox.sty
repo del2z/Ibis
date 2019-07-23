@@ -4,35 +4,24 @@
 \RequirePackage{tikz}
 \RequirePackage{pgfplots}
 \RequirePackage{enumitem}
-\RequirePackage{xeCJK}
 \RequirePackage{amsmath}
 \RequirePackage{amsfonts}
 \RequirePackage{algorithm}
 \RequirePackage{algorithmic}
 \RequirePackage{etoolbox}
 
-\setmainfont{Palatino}
-\setsansfont{Times}
-\setmonofont[BoldFont=Courier-Bold, ItalicFont=Courier-Oblique]{Courier}
-\setCJKmainfont[BoldFont=PingFangSC-Medium]{PingFangSC-Regular}
-\setCJKsansfont[BoldFont=STHeitiSC-Medium]{STHeitiSC-Light}
-\setCJKmonofont{YuppySC-Regular}
-\renewcommand*{\familydefault}{\rmdefault}
-
-\setbeamersize{text margin left=7.5mm,text margin right=7.5mm}
-
 %% useful commands
 \def\longdash{\raisebox{0.2ex}{\,-----\,}}
 \def\ret{\protect\\[1em]}
-\def\tinybreak{\vskip 0pt}
-\def\sepline{%
-  \tinybreak%
-  \makebox[\textwidth][c]{\textcolor{gray}{\rule{\dimexpr\textwidth+3mm\relax}{0.5pt}}}
-  \tinybreak%
+\def\vbreak{\vskip0pt}
+\def\srule{%
+  \leavevmode%
+  \hbox{\hfill\textcolor{gray}{\rule{\textwidth}{1.2pt}}\hfill}
+  \vskip0pt%
 }
 
-\BeforeBeginEnvironment{displaymath}{\tinybreak}
-\AfterEndEnvironment{displaymath}{\tinybreak}
+\BeforeBeginEnvironment{displaymath}{\vbreak}
+\AfterEndEnvironment{displaymath}{\vbreak}
 
 \g@addto@macro{\normalsize}{%
   \setlength{\abovedisplayskip}{5pt}%
@@ -46,8 +35,8 @@
   \setlength{\belowdisplayskip}{3pt}%
   \setlength{\belowdisplayshortskip}{3pt}}
 
-\useinnertheme{karma}
-\useoutertheme{karma}
-\usecolortheme{karma}
-
+\usecolortheme{fox}
+\usefonttheme{fox}
+\useinnertheme{fox}
+\useoutertheme{fox}
 \mode<all>
