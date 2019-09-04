@@ -28,7 +28,7 @@
 \setCJKmonofont{YuppySC-Regular}
 \fi
 
-\usetheme{fox}
+\usetheme{ibis}
 \setbeamersize{text margin left=10mm,text margin right=10mm}
 
 \endinput
